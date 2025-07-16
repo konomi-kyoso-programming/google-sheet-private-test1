@@ -1,0 +1,10 @@
+import streamlit as st
+import pandas as pd
+from streamlit_gsheets import GSheetsConnection
+
+st.title("TO DO")
+#conn = st.experimental_connection("gsheets", type="GSheetsConnection")
+conn = st.connection("gsheets", type=GSheetsConnection)
+df = conn.read(worksheet="todo", ttl=5)
+
+st.dataframe(df)
