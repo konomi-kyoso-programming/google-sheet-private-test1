@@ -29,4 +29,4 @@ if submit_button:
             {"item": item, "status": status, "entry_date": entry_date}
         ])
     updated_df = pd.concat([df, the_data], ignore_index=True)
-    conn.update(worksheet="sheet1", data=updated_df)
+    conn.update(worksheet="sheet1", data=updated_df) 
